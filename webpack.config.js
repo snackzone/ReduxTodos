@@ -2,7 +2,10 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'source-maps',
+  resolve: {
+    extensions: ['', '.js', '.jsx'],
+  },
   entry: [
     'webpack-hot-middleware/client',
     './index',
